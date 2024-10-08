@@ -63,6 +63,14 @@ body{
     height: 100%;
 }
 
+.center {
+    text-align: center;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
 /*----------------------*/
 /* Header               */
 /*----------------------*/
@@ -70,8 +78,9 @@ body{
 header {
 
     .home {
-        background: #fff url('../img/banner.jpg') no-repeat center center;
+        background: #fff url('../img/banner1.jpg') no-repeat center center;
         height: var(--app-header-height);
+        background-size: cover;
     }
 
     .about-us {
@@ -152,6 +161,22 @@ nav ul li a:hover {
         text-align: center;
     }
 }
+.button {
+    border-radius: 5px;
+    padding: 8px 25px;
+    font-size: 17px;
+    transition: all 0.25s ease-in-out;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--app-primary-color);
+    color: var(--app-third-color);
+}
+
+.button:hover {
+    background-color: var(--app-primary-dark-color);
+    transform: scale(1.1);
+}  
 
 .hero-banner {
     height: calc(80svh - 80px);
@@ -174,16 +199,6 @@ nav ul li a:hover {
 
     .hero-banner-buttons {
         margin-top: 30px;
-
-        a {
-            border-radius: 5px;
-            padding: 8px 25px;
-            font-size: 17px;
-            transition: all 0.25s ease-in-out;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
 
         .primary {
             background-color: var(--app-primary-color);
@@ -222,6 +237,10 @@ section {
         margin-bottom: 20px;
     }    
 }
+section.more {
+    height: 200px;
+    padding: 0;
+}
 
 .row {
     flex-wrap: wrap;
@@ -252,13 +271,15 @@ section {
 
 article {
     div {
-        width: calc(100% - 30px - 30px);
+        width: calc(100% - 20px - 20px);
+
+        margin: 0 20px;
 
         h2 {
             text-align: left;
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 500;
-            margin: 10px auto;
+            margin: 15px auto;
             color: #000;
         }
 
@@ -414,6 +435,10 @@ article {
     width: calc(50% - 20px)
 }
 
+iframe.map-iframe {
+    border: 10px;
+}
+
 form {
     font-size: 16px;
     font-weight: 300;
@@ -425,41 +450,25 @@ form {
     .text-input {
         background-color: #e6e6e8;
         color: black;
-        padding: 5px;
-        width: 300px;
+        padding: 5px 15px;
+        width: 100%;
         border: 2px 2px 2px 2px;
         border-radius: 5px;
     }
 
     textarea {
         height: 70px;
-        width: 300px;
+        width: 100%;
         resize: none;
         background-color: #e6e6e8;
         border-radius: 5px;
-        padding: 5px;
+        padding: 5px 15px;
     }
 
     h3 {
         font-size: 10px;
         font-weight: 350;
-    }
-
-    .submit {
-        color: black;
-        padding: 10px;
-        border: 10px;
-        margin-bottom: 10px;
-        margin-top: 0px;
-        border-radius: 6px;
-        background-color: #ecb13c;
-        width: 200px;
-    }
-    
-    .submit:hover {
-        background-color: #fab005;
-        transition: all 0.2ms;
-    }    
+    }   
 }
 
 .row-25 {
@@ -485,6 +494,7 @@ form {
 }
 
 .contact-us-buttons{
+    /*
     a {
         border-radius: 5px;
         padding: 8px 25px;
@@ -493,6 +503,7 @@ form {
         font-weight: 600;
         text-decoration: none;
     }
+        */
 
     .contact-primary {
         background-color: var(--app-primary-color);
@@ -516,7 +527,7 @@ form {
 
 footer {
     height: var(--app-footer-height);
-    background-color: rgb(0 0 0 / 20%);
+    background-color: #f4f5f7;
 
     ul {
         list-style: none;
